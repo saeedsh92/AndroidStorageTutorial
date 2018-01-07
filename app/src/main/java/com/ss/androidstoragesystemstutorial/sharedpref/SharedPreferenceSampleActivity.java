@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.ss.androidstoragesystemstutorial.R;
 
@@ -16,12 +17,14 @@ public class SharedPreferenceSampleActivity extends AppCompatActivity {
     private EditText lastNameEditText;
     private EditText ageEditText;
     private SwitchCompat switchCompat;
+    private PersonalInfoSharedPrefManager sharedPrefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shared_preference_sample);
         setupViews();
+        sharedPrefManager = new PersonalInfoSharedPrefManager(this);
     }
 
     private void setupViews() {
@@ -40,7 +43,7 @@ public class SharedPreferenceSampleActivity extends AppCompatActivity {
         lastNameEditText = findViewById(R.id.et_sharedPref_lastName);
         ageEditText = findViewById(R.id.et_sharedPref_age);
         switchCompat = findViewById(R.id.switch_sharedPref_isAndroidExpertStudent);
-        Button clearAllButton = findViewById(R.id.button_sharedPref_clearAll);
+        final Button clearAllButton = findViewById(R.id.button_sharedPref_clearAll);
         clearAllButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,7 +54,30 @@ public class SharedPreferenceSampleActivity extends AppCompatActivity {
             }
         });
         Button saveButton = findViewById(R.id.button_sharedPref_save);
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sharedPrefManager.savePersonalInfo(
+                        firstNameEditText.getText().toString(),
+                        lastNameEditText.getText().toString(),
+                        Integer.parseInt(ageEditText.getText().toString()),
+                        switchCompat.isChecked()
+                );
+                clearAllButton.performClick();
+                Toast.makeText(SharedPreferenceSampleActivity.this, "Success", Toast.LENGTH_SHORT).show();
+            }
+        });
         Button loadButton = findViewById(R.id.button_sharedPref_load);
+        loadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                firstNameEditText.setText(sharedPrefManager.getFirstName());
+                lastNameEditText.setText(sharedPrefManager.getLastName());
+                ageEditText.setText(String.valueOf(sharedPrefManager.getAge()));
+                switchCompat.setChecked(sharedPrefManager.getIsAndroidExpertStudent());
+            }
+        });
     }
+
 
 }

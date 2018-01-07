@@ -63,7 +63,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
         public void bindContact(final Contact contact) {
             nameTextView.setText(contact.getName());
             phoneNumberTextView.setText(contact.getPhoneNumber());
-            letterTextView.setText(contact.getName().charAt(0));
+            letterTextView.setText(contact.getName().substring(0,1));
             deleteImageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -8,8 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.ss.androidstoragesystemstutorial.DBInjector;
 import com.ss.androidstoragesystemstutorial.R;
+import com.ss.androidstoragesystemstutorial.util.Util;
 
 public class SQLiteSampleActivity extends AppCompatActivity {
 
@@ -18,12 +21,19 @@ public class SQLiteSampleActivity extends AppCompatActivity {
     private Button addContactBTN;
     private View showAllContactsBTN;
     private TextView contactsCountTV;
+    private ContactDAO contactDAO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sqlite_sample);
         setupViews();
+        contactDAO= DBInjector.provideContactDao(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         updateContactsCount();
     }
 
@@ -49,6 +59,17 @@ public class SQLiteSampleActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (nameET.length() > 0) {
                     if (phoneNumberET.length() > 0) {
+                        Contact contact=new Contact();
+                        contact.setName(nameET.getText().toString());
+                        contact.setPhoneNumber(phoneNumberET.getText().toString());
+                        if (contactDAO.addContact(contact)){
+                            Toast.makeText(SQLiteSampleActivity.this,"SUCCESS",Toast.LENGTH_SHORT).show();
+                            clearEditTexts();
+                            Util.closeKeyboard(SQLiteSampleActivity.this);
+                            updateContactsCount();
+                        }else {
+                            Toast.makeText(SQLiteSampleActivity.this,"FAILED",Toast.LENGTH_SHORT).show();
+                        }
 
                     } else {
                         phoneNumberET.setError("Phone number is empty");
@@ -69,12 +90,17 @@ public class SQLiteSampleActivity extends AppCompatActivity {
     }
 
     private void updateContactsCount() {
-        int count=0;
+        int count = contactDAO.getContactsCount();
         contactsCountTV.setText(String.valueOf(count));
         if (count > 0) {
             showAllContactsBTN.setEnabled(true);
         } else {
             showAllContactsBTN.setEnabled(false);
         }
+    }
+
+    private void clearEditTexts(){
+        nameET.setText("");
+        phoneNumberET.setText("");
     }
 }
