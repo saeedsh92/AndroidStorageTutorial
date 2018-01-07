@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.ss.androidstoragesystemstutorial.R;
 
 public class SQLiteSampleActivity extends AppCompatActivity {
-
+    
     private EditText nameET;
     private EditText phoneNumberET;
     private Button addContactBTN;
