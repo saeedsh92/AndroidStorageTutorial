@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ss.androidstoragesystemstutorial.sqlite.SQLiteSampleActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_sqliteSample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+
+            <EditText
+                android:id="@+id/et_sqliteSample_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Name" />
+
+            <EditText
+                android:id="@+id/et_sqliteSample_phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="Phone Number" />
+
+            <Button
+                android:id="@+id/button_sqliteSample_addContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Add Contact" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_sqliteSample_showAllContacts"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorAccent">
+
+            <TextView
+                android:id="@+id/tv_sqliteSample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="SHOW ALL CONTANCTS"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_sqliteSample_contactsCount"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/tv_sqliteSample"
+                android:background="@drawable/shape_circle_white"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                tools:text="0" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
