@@ -62,7 +62,7 @@ public class SQLiteSampleActivity extends AppCompatActivity {
                         Contact contact=new Contact();
                         contact.setName(nameET.getText().toString());
                         contact.setPhoneNumber(phoneNumberET.getText().toString());
-                        if (contactDAO.addContact(contact)){
+                        if (contactDAO.addContact(contact)>=0){
                             Toast.makeText(SQLiteSampleActivity.this,"SUCCESS",Toast.LENGTH_SHORT).show();
                             clearEditTexts();
                             Util.closeKeyboard(SQLiteSampleActivity.this);

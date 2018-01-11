@@ -2,6 +2,7 @@ package com.ss.androidstoragesystemstutorial;
 
 import android.content.Context;
 
+import com.ss.androidstoragesystemstutorial.room.MyRoomDatabase;
 import com.ss.androidstoragesystemstutorial.sqlite.ContactDAO;
 import com.ss.androidstoragesystemstutorial.sqlite.SQLiteHelper;
 
@@ -11,6 +12,6 @@ import com.ss.androidstoragesystemstutorial.sqlite.SQLiteHelper;
 
 public class DBInjector {
     public static ContactDAO provideContactDao(Context context) {
-        return new SQLiteHelper(context.getApplicationContext());
+        return MyRoomDatabase.getInstance(context).contactDAO();
     }
 }

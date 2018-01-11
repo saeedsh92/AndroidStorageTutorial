@@ -41,7 +41,7 @@ public class ContactsListActivity extends AppCompatActivity implements ContactAd
 
     @Override
     public void onDeleteClick(Contact contact) {
-        if (contactDAO.removeContact(contact)) {
+        if (contactDAO.removeContact(contact)>0) {
             Toast.makeText(this,"SUCCESS",Toast.LENGTH_SHORT).show();
             contactAdapter.notifyDataSetChanged();
         }else {

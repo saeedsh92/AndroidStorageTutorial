@@ -39,33 +39,33 @@ public class SQLiteHelper extends SQLiteOpenHelper implements ContactDAO {
     }
 
     @Override
-    public boolean addContact(Contact contact) {
+    public long addContact(Contact contact) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("name", contact.getName());
         contentValues.put("phone_number", contact.getPhoneNumber());
         long result = db.insert("tbl_contacts", null, contentValues);
         db.close();
-        return result != -1;
+        return result;
     }
 
     @Override
-    public boolean removeContact(Contact contact) {
+    public int removeContact(Contact contact) {
         SQLiteDatabase db = getWritableDatabase();
         int result = db.delete("tbl_contacts", "id = ?", new String[]{String.valueOf(contact.getId())});
         db.close();
-        return result != 0;
+        return result;
     }
 
     @Override
-    public boolean updateContact(Contact contact) {
+    public int updateContact(Contact contact) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("name", contact.getName());
         contentValues.put("phone_number", contact.getPhoneNumber());
         int result = db.update("tbl_contacts", contentValues, " id = ?", new String[]{String.valueOf(contact.getId())});
         db.close();
-        return result != 0;
+        return result;
     }
 
     @Override

@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".sharedpref.SharedPreferenceSampleActivity" android:label="Shared Preference"/>
-        <activity android:name=".room.RoomSampleActivity" android:label="Room Database" />
+        <activity android:name=".room.RoomSampleActivity" android:label="Room Library" />
         <activity android:name=".sqlite.SQLiteSampleActivity" android:label="SQLite" />
         <activity android:name=".sqlite.ContactsListActivity" android:label="Contacts"/>
     </application>
