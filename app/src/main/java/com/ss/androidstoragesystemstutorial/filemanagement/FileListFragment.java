@@ -43,7 +43,6 @@ public class FileListFragment extends Fragment implements FileAdapter.FileViewHo
     }
 
     public static FileListFragment newInstance(String path) {
-
         Bundle args = new Bundle();
         args.putString("path", path);
         FileListFragment fragment = new FileListFragment();
