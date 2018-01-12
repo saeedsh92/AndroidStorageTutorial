@@ -4,8 +4,8 @@
     android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/iv_file"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:layout_centerHorizontal="true"
         />
     <TextView
@@ -15,6 +15,7 @@
         android:textColor="@android:color/white"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/iv_file"
+        android:gravity="center_horizontal"
         android:ellipsize="end"
         android:maxLines="2"
         android:minLines="2"/>
