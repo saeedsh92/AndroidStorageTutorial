@@ -87,6 +87,7 @@
                 android:text="SD Card" />
 
             <Button
+                android:id="@+id/button_main_fileManagement"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"

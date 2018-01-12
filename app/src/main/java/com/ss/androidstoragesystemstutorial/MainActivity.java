@@ -9,6 +9,7 @@ import android.view.View;
 import android.webkit.URLUtil;
 import android.widget.Button;
 
+import com.ss.androidstoragesystemstutorial.filemanagement.FileManagementActivity;
 import com.ss.androidstoragesystemstutorial.sharedpref.SharedPreferenceSampleActivity;
 import com.ss.androidstoragesystemstutorial.sqlite.SQLiteSampleActivity;
 
@@ -40,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.tv_main_githubLink:
                 startActivity(Intent.createChooser(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/saeedsh92/AndroidStorageTutorial")),
                         "Select Browser"));
+                break;
+            case R.id.button_main_fileManagement:
+                startActivity(new Intent(this, FileManagementActivity.class));
                 break;
         }
     }
