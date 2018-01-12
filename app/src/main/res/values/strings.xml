@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidStorageSystemsTutorial</string>
+    <string name="permissionRequest_message">We need %1$s permission to continue. click ALLOW button in permission request dialog.</string>
 </resources>

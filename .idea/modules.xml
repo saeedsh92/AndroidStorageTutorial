@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidStorageSystemsTutorial.iml" filepath="$PROJECT_DIR$/AndroidStorageSystemsTutorial.iml" />
       <module fileurl="file://C:\Users\user\Documents\AndroidStorageTutorial\AndroidStorageSystemsTutorial.iml" filepath="C:\Users\user\Documents\AndroidStorageTutorial\AndroidStorageSystemsTutorial.iml" />
-      <module fileurl="file://$PROJECT_DIR$/AndroidStorageTutorial.iml" filepath="$PROJECT_DIR$/AndroidStorageTutorial.iml" />
+      <module fileurl="file://E:\AndroidStorageSystemsTutorial\AndroidStorageTutorial.iml" filepath="E:\AndroidStorageSystemsTutorial\AndroidStorageTutorial.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://C:\Users\user\Documents\AndroidStorageTutorial\app\app.iml" filepath="C:\Users\user\Documents\AndroidStorageTutorial\app\app.iml" />
     </modules>
