@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(Intent.createChooser(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/saeedsh92/AndroidStorageTutorial")),
                         "Select Browser"));
                 break;
-
             case R.id.button_main_fileManagement:
                 startActivity(new Intent(this, FileManagementActivity.class));
                 break;
