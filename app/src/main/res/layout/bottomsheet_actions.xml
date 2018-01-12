@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:weightSum="3">
+
+    <RelativeLayout
+        android:id="@+id/rl_fileActions_copyButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:foreground="?selectableItemBackgroundBorderless">
+
+        <ImageView
+            android:id="@+id/iv_fileActions_copy"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shape_circle_accent"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_content_copy_white_32dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_fileActions_copy"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:text="Copy"
+            android:textColor="@android:color/black"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_fileActions_moveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:foreground="?selectableItemBackgroundBorderless">
+
+        <ImageView
+            android:id="@+id/iv_fileActions_move"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shape_circle_accent"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_move_white_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_fileActions_move"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:text="Move"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_fileActions_deleteButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:foreground="?selectableItemBackgroundBorderless">
+
+        <ImageView
+            android:id="@+id/iv_fileActions_delete"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shape_circle_accent"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_delete_white_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_fileActions_delete"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:text="Delete"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+</LinearLayout>
