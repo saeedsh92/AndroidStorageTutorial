@@ -53,7 +53,7 @@ public class EditContactDialog extends DialogFragment {
                         Contact contact = getArguments().getParcelable(EXTRA_KEY_CONTACT);
                         contact.setName(nameEt.getText().toString());
                         contact.setPhoneNumber(phoneNumberET.getText().toString());
-                        if (contactDAO.updateContact(contact)) {
+                        if (contactDAO.updateContact(contact)>0) {
                             Util.closeKeyboard(getActivity());
                             Toast.makeText(getContext(), "SUCCESS", Toast.LENGTH_SHORT).show();
                             dismiss();

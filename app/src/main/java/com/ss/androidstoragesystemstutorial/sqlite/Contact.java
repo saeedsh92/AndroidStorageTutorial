@@ -1,15 +1,21 @@
 package com.ss.androidstoragesystemstutorial.sqlite;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
 import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
  * Created by Saeed shahini on 1/7/2018.
  */
-
+@Entity(tableName = "tbl_contacts")
 public class Contact implements Parcelable {
+    @PrimaryKey(autoGenerate = true)
     private int id;
+    @ColumnInfo(name = "name")
     private String name;
+    @ColumnInfo(name = "phone_number")
     private String phoneNumber;
 
     public int getId() {

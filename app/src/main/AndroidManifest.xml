@@ -18,18 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".sharedpref.SharedPreferenceSampleActivity"
-            android:label="Shared Preference" />
-        <activity
-            android:name=".room.RoomSampleActivity"
-            android:label="Room Database" />
-        <activity
-            android:name=".sqlite.SQLiteSampleActivity"
-            android:label="SQLite" />
-        <activity
-            android:name=".sqlite.ContactsListActivity"
-            android:label="Contacts" />
+        <activity android:name=".sharedpref.SharedPreferenceSampleActivity" android:label="Shared Preference"/>
+        <activity android:name=".room.RoomSampleActivity" android:label="Room Library" />
+        <activity android:name=".sqlite.SQLiteSampleActivity" android:label="SQLite" />
+        <activity android:name=".sqlite.ContactsListActivity" android:label="Contacts"/>
         <activity android:name=".filemanagement.FileManagementActivity" android:label="File Management"></activity>
     </application>
 
