@@ -23,6 +23,7 @@ public class FileListFragment extends Fragment implements FileAdapter.FileViewHo
     private View rootView;
     private RecyclerView recyclerView;
     private FileAdapter fileAdapter = new FileAdapter(this);
+    private View emptyState;
 
     @Nullable
     @Override
@@ -38,6 +39,7 @@ public class FileListFragment extends Fragment implements FileAdapter.FileViewHo
         recyclerView = rootView.findViewById(R.id.rv_filesList);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2, LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(fileAdapter);
+        emptyState=rootView.findViewById(R.id.ll_filesList_emptyStateContainer);
     }
 
     public static FileListFragment newInstance(String path) {
@@ -54,7 +56,7 @@ public class FileListFragment extends Fragment implements FileAdapter.FileViewHo
 
     }
 
-    public FileManagementActivity getParentActivity(){
+    public FileManagementActivity getParentActivity() {
         return (FileManagementActivity) getActivity();
     }
 }
