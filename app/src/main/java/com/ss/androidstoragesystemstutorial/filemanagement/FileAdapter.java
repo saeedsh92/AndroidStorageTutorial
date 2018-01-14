@@ -42,6 +42,19 @@ public class FileAdapter extends RecyclerView.Adapter<FileAdapter.FileViewHolder
         notifyDataSetChanged();
     }
 
+    public void addFile(File file) {
+        files.add(0, file);
+        notifyItemInserted(0);
+    }
+
+    public void removeFile(File file) {
+        int filePosition = files.indexOf(file);
+        if (filePosition != RecyclerView.NO_POSITION) {
+            files.remove(file);
+            notifyItemRemoved(filePosition);
+        }
+    }
+
     @Override
     public int getItemCount() {
         return files.size();
@@ -68,16 +81,26 @@ public class FileAdapter extends RecyclerView.Adapter<FileAdapter.FileViewHolder
 
             fileNameTextView.setText(file.getName());
 
-            imageView.setOnClickListener(new View.OnClickListener() {
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     onFileClick.onFileClick(file);
+                }
+            });
+
+            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    onFileClick.onFileLongClick(file);
+                    return true;
                 }
             });
         }
 
         public interface OnFileClick {
             void onFileClick(File file);
+
+            void onFileLongClick(File file);
         }
     }
 }
