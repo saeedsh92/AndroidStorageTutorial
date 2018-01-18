@@ -11,7 +11,7 @@ import com.ss.androidstoragesystemstutorial.sqlite.ContactDAO;
 /**
  * Created by user on 1/11/2018.
  */
-@Database(entities = {Contact.class}, version = 1)
+@Database(entities = {Contact.class}, version = 1,exportSchema = false)
 public abstract class MyRoomDatabase extends RoomDatabase {
     private static MyRoomDatabase instance;
 

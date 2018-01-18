@@ -1,5 +1,6 @@
 package com.ss.androidstoragesystemstutorial;
 
+import android.app.DownloadManager;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.webkit.URLUtil;
 import android.widget.Button;
 
+import com.ss.androidstoragesystemstutorial.download.DownloadManagerActivity;
 import com.ss.androidstoragesystemstutorial.filemanagement.FileManagementActivity;
 import com.ss.androidstoragesystemstutorial.room.RoomSampleActivity;
 import com.ss.androidstoragesystemstutorial.sharedpref.SharedPreferenceSampleActivity;
@@ -46,6 +48,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button_main_fileManagement:
                 startActivity(new Intent(this, FileManagementActivity.class));
+                break;
+            case R.id.button_main_downloadManager:
+                startActivity(new Intent(this, DownloadManagerActivity.class));
                 break;
         }
     }

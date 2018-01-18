@@ -102,6 +102,7 @@
                 android:text="Upload File " />
 
             <Button
+                android:id="@+id/button_main_downloadManager"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
