@@ -21,6 +21,7 @@ public abstract class MyRoomDatabase extends RoomDatabase {
         if (instance == null) {
             instance = Room.databaseBuilder(context, MyRoomDatabase.class, "my_db").allowMainThreadQueries().build();
         }
+
         return instance;
     }
 }
