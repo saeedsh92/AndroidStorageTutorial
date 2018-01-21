@@ -12,6 +12,7 @@ import com.ss.androidstoragesystemstutorial.sqlite.SQLiteHelper;
 
 public class DBInjector {
     public static ContactDAO provideContactDao(Context context) {
+
         return MyRoomDatabase.getInstance(context).contactDAO();
     }
 }
