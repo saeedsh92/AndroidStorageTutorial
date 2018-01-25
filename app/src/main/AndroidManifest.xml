@@ -39,7 +39,8 @@
             android:label="File Management" />
         <activity
             android:name=".download.DownloadManagerActivity"
-            android:label="Download Manager"/>
+            android:label="Download Manager" />
+        <activity android:name=".multithreading.MultiThreadingSampleActivity"></activity>
     </application>
 
 </manifest>

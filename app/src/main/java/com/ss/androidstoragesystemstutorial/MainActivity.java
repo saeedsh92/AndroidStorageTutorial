@@ -12,6 +12,7 @@ import android.widget.Button;
 
 import com.ss.androidstoragesystemstutorial.download.DownloadManagerActivity;
 import com.ss.androidstoragesystemstutorial.filemanagement.FileManagementActivity;
+import com.ss.androidstoragesystemstutorial.multithreading.MultiThreadingSampleActivity;
 import com.ss.androidstoragesystemstutorial.room.RoomSampleActivity;
 import com.ss.androidstoragesystemstutorial.sharedpref.SharedPreferenceSampleActivity;
 import com.ss.androidstoragesystemstutorial.sqlite.SQLiteSampleActivity;
@@ -27,6 +28,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void setupViews() {
         Toolbar toolbar = findViewById(R.id.toolbar_main);
+        toolbar.post(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        });
         setSupportActionBar(toolbar);
     }
 
@@ -51,6 +58,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button_main_downloadManager:
                 startActivity(new Intent(this, DownloadManagerActivity.class));
+                break;
+            case R.id.button_main_multiThreadingSample:
+                startActivity(new Intent(this, MultiThreadingSampleActivity.class));
                 break;
         }
     }

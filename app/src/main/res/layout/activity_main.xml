@@ -45,13 +45,13 @@
                 android:id="@+id/tv_main_githubLink"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onClick"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="12dp"
                 android:drawablePadding="8dp"
                 android:drawableRight="@drawable/ic_github_24dp"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_vertical"
+                android:onClick="onClick"
                 android:text="View source code on github"
                 android:textColor="@android:color/white" />
 
@@ -109,6 +109,13 @@
                 android:onClick="onClick"
                 android:text="Download File " />
 
+            <Button
+                android:id="@+id/button_main_multiThreadingSample"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onClick"
+                android:text="Mutli Threading " />
         </LinearLayout>
 
     </ScrollView>
