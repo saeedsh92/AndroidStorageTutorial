@@ -116,6 +116,14 @@
                 android:layout_gravity="center_horizontal"
                 android:onClick="onClick"
                 android:text="Mutli Threading " />
+
+            <Button
+                android:id="@+id/button_main_services"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onClick"
+                android:text="Services" />
         </LinearLayout>
 
     </ScrollView>

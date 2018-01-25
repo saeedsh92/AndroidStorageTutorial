@@ -40,7 +40,15 @@
         <activity
             android:name=".download.DownloadManagerActivity"
             android:label="Download Manager" />
-        <activity android:name=".multithreading.MultiThreadingSampleActivity"></activity>
+        <activity android:name=".multithreading.MultiThreadingSampleActivity" />
+
+        <service
+            android:name=".services.DownloadFileService"
+            android:exported="false" />
+
+        <activity android:name=".services.IntentServiceSampleActivity" android:label="Services">
+
+        </activity>
     </application>
 
 </manifest>

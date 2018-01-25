@@ -14,6 +14,7 @@ import com.ss.androidstoragesystemstutorial.download.DownloadManagerActivity;
 import com.ss.androidstoragesystemstutorial.filemanagement.FileManagementActivity;
 import com.ss.androidstoragesystemstutorial.multithreading.MultiThreadingSampleActivity;
 import com.ss.androidstoragesystemstutorial.room.RoomSampleActivity;
+import com.ss.androidstoragesystemstutorial.services.IntentServiceSampleActivity;
 import com.ss.androidstoragesystemstutorial.sharedpref.SharedPreferenceSampleActivity;
 import com.ss.androidstoragesystemstutorial.sqlite.SQLiteSampleActivity;
 
@@ -61,6 +62,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button_main_multiThreadingSample:
                 startActivity(new Intent(this, MultiThreadingSampleActivity.class));
+                break;
+
+            case R.id.button_main_services:
+                startActivity(new Intent(this, IntentServiceSampleActivity.class));
                 break;
         }
     }
