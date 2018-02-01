@@ -124,6 +124,14 @@
                 android:layout_gravity="center_horizontal"
                 android:onClick="onClick"
                 android:text="Services" />
+
+            <Button
+                android:id="@+id/button_main_broadCastReceiver"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onClick"
+                android:text="Broadcast Receiver" />
         </LinearLayout>
 
     </ScrollView>

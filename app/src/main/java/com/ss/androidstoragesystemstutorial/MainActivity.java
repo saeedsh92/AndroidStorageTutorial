@@ -10,6 +10,7 @@ import android.view.View;
 import android.webkit.URLUtil;
 import android.widget.Button;
 
+import com.ss.androidstoragesystemstutorial.broadcast.BroadcastReceiverSampleActivity;
 import com.ss.androidstoragesystemstutorial.download.DownloadManagerActivity;
 import com.ss.androidstoragesystemstutorial.filemanagement.FileManagementActivity;
 import com.ss.androidstoragesystemstutorial.multithreading.MultiThreadingSampleActivity;
@@ -66,6 +67,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.button_main_services:
                 startActivity(new Intent(this, IntentServiceSampleActivity.class));
+                break;
+            case R.id.button_main_broadCastReceiver:
+                startActivity(new Intent(this, BroadcastReceiverSampleActivity.class));
                 break;
         }
     }

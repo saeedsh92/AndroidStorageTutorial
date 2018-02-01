@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ss.androidstoragesystemstutorial">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -46,9 +48,16 @@
             android:name=".services.DownloadFileService"
             android:exported="false" />
 
-        <activity android:name=".services.IntentServiceSampleActivity" android:label="Services">
+        <activity
+            android:name=".services.IntentServiceSampleActivity"
+            android:label="Services"></activity>
+        <activity android:name=".broadcast.BroadcastReceiverSampleActivity"></activity>
 
-        </activity>
+        <receiver android:name=".broadcast.MessageBroadcastReceiver">
+            <intent-filter>
+                <action android:name="7learn_new_message" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
